@@ -43,9 +43,23 @@
   .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 17px}.span-2{grid-column:1/-1}.section-label{display:flex;align-items:center;gap:10px;font-size:10px;text-transform:uppercase;letter-spacing:.13em;font-weight:800;color:var(--red);margin:24px 0 15px;padding-bottom:10px;border-bottom:1px solid var(--line)}.section-label:before{content:"";width:7px;height:7px;border-radius:2px;background:var(--red);transform:rotate(45deg)}.upload{display:block;border:1px dashed #C6C8CD;border-radius:14px;padding:15px;background:#FAFAFB;transition:border-color .18s,background .18s}.upload:hover{border-color:#E99AA9;background:#FFF9FA}.upload input{width:100%;font-size:11px;color:#4B4D53}.file-name{font-size:10px;color:var(--muted);margin-top:8px;line-height:1.6;overflow-wrap:anywhere}.checkline{display:flex;gap:10px;align-items:flex-start;font-size:11px;line-height:1.7;color:#4A4C52}.checkline input{margin-top:4px;accent-color:var(--red);width:15px;height:15px;flex-shrink:0}.footer-note{font-size:10px;color:var(--muted);line-height:1.8;margin-top:18px}.divider{border:0;border-top:1px solid var(--line);margin:20px 0}.empty{text-align:center;padding:34px 18px;border:1px dashed #D1D5DB;border-radius:17px;color:var(--muted);background:#FCFCFD}.empty strong{display:block;color:var(--ink);font-size:13px;margin:12px 0 6px}.empty p{font-size:11px;line-height:1.7;margin:0}
 
   .request-tools{display:flex;flex-direction:column;gap:14px;margin:0 0 20px}
-  .request-search{position:relative;width:100%}
-  .request-search>i{position:absolute;left:15px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:#858891;pointer-events:none}
-  .request-search input{width:100%;min-height:48px;border:1px solid #D9DBE0;border-radius:14px;padding:13px 15px 13px 44px;background:#fff;color:var(--ink);outline:none;font-size:12px;transition:border-color .18s,box-shadow .18s}
+  .request-search{
+  position:relative;
+  display:block;
+  width:100%;
+}
+  .request-search>i,
+.request-search>svg{
+  position:absolute;
+  left:15px;
+  top:50%;
+  transform:translateY(-50%);
+  width:18px;
+  height:18px;
+  color:#858891;
+  pointer-events:none;
+}
+    .request-search input{width:100%;min-height:48px;border:1px solid #D9DBE0;border-radius:14px;padding:13px 15px 13px 44px;background:#fff;color:var(--ink);outline:none;font-size:12px;transition:border-color .18s,box-shadow .18s}
   .request-search input:focus{border-color:var(--red);box-shadow:0 0 0 4px rgba(227,23,62,.08)}
   .request-filters{display:flex;flex-wrap:wrap;gap:8px}
   .request-filter{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:39px;border:1px solid #E0E1E5;border-radius:999px;background:#fff;color:#565860;padding:8px 12px;font-size:10px;font-weight:800;transition:all .16s}
@@ -160,13 +174,13 @@
         <span>Mis solicitudes y pagos</span>
       </button>
       <button id="menuSupport" type="button" class="menu-btn" onclick="irASeccion('supportView')">
-        <i data-lucide="life-buoy" class="w-5 h-5 shrink-0"></i>
-        <span>Soporte y ayuda</span>
+        <i data-lucide="headset" class="w-5 h-5 shrink-0"></i>
+        <span>Soporte</span>
       </button>
     </div>
 
     <div class="p-4 text-center text-xs text-white/80 border-t border-white/20 leading-relaxed">
-      Portal de pagos<br>Universidad ESAN
+      Herramienta Académica
     </div>
   </aside>
 
@@ -197,7 +211,7 @@
     <div class="p-6 sm:p-9">
       <div class="flex items-center gap-3 mb-8">
         <div class="w-12 h-12 shrink-0 rounded-xl bg-red-50 flex items-center justify-center font-extrabold text-xl text-[var(--esan-red)]">UE</div>
-        <div><p class="font-extrabold text-gray-900">UNIVERSIDAD ESAN</p><p class="text-xs text-gray-500 mt-1">Servicios Académicos</p></div>
+        <div><p class="font-extrabold text-gray-900">UNIVERSIDAD ESAN</p><p class="text-xs text-gray-500 mt-1">Portal de Pagos</p></div>
       </div>
       <div id="vistaLogin">
         <p class="text-xs uppercase tracking-[.18em] font-bold text-[var(--esan-red)]">Portal de trámites y pagos</p>
@@ -222,7 +236,7 @@
           <div id="codigoVerificacionContenedor" class="hidden">
             <label class="field-label" for="codigoVerificacion">Código de verificación</label>
             <input id="codigoVerificacion" class="field" type="text" inputmode="numeric" maxlength="6" autocomplete="one-time-code" placeholder="Ingresa los 6 dígitos recibidos">
-            <p class="mt-2 text-xs leading-relaxed text-gray-600">Coloca aquí el código de verificación recibido en tu correo institucional.</p>
+            <p class="mt-2 text-xs leading-relaxed text-gray-600">Coloca aquí el código de verificación recibido en tu correo institucional y presiona <strong>«Verificar y entrar».</strong></p>
             <p id="codigoVerificacionError" class="error-text hidden"></p>
             <button id="btnReenviarCodigo" type="button" onclick="solicitarCodigoAcceso(true)" disabled class="mt-3 text-sm font-semibold text-[var(--esan-red)] disabled:cursor-not-allowed disabled:opacity-60 hover:underline">Reenviar código (02:00)</button>
           </div>
@@ -318,7 +332,11 @@
       </section>
 
       <section id="paymentView" class="panel hidden">
-        <button id="backToListBtn" type="button" class="subtle-btn" style="padding-left:0;margin-bottom:8px"><i data-lucide="arrow-left" style="width:15px;height:15px;vertical-align:middle"></i> Volver a mis solicitudes</button>
+        <button id="backToListBtn" type="button"
+  class="inline-flex items-center gap-2 text-sm font-bold text-[var(--esan-red)] hover:underline mb-5">
+  <i data-lucide="arrow-left" class="w-4 h-4"></i>
+  Volver a mis solicitudes
+</button>
         <h2 class="panel-title">Registrar comprobante de pago</h2>
         <p class="panel-desc">La solicitud ya está seleccionada. No necesitas volver a elegir el trámite ni escribir su identificador.</p>
         <div id="paymentStatus" class="status hidden" role="status" aria-live="polite"></div>
@@ -448,7 +466,7 @@
         lista.classList.add("hidden");
         pagos.classList.add("hidden");
         soporte.classList.remove("hidden");
-        document.getElementById("topTitle").textContent="Soporte y ayuda";
+        document.getElementById("topTitle").textContent="Soporte";
         actualizarPestanaActiva("supportView");
       }else{
         soporte.classList.add("hidden");
