@@ -41,6 +41,21 @@
   .request-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.request-name{font-size:14px;font-weight:800;line-height:1.5;color:#2E3035}.request-id{font-size:10px;color:var(--muted);margin-top:5px;overflow-wrap:anywhere}.pill{font-size:9px;font-weight:800;border-radius:999px;padding:7px 10px;white-space:nowrap;background:#F0F1F4;color:#4B5563;border:1px solid #E8E9ED}.pill.green{background:#DDF8EC;color:#08734E;border-color:#C2F0DA}.pill.amber{background:#FFF4D8;color:#8A5300;border-color:#F9E6AE}.pill.red{background:#FEE6EA;color:#A80B2A;border-color:#FBD0D8}.request-detail{font-size:11px;color:var(--muted);line-height:1.8}.request-bottom{border-top:1px solid #F0F0F2;padding-top:15px;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:auto}.amount-label{font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:800}.amount{font-size:22px;font-weight:800;letter-spacing:-.04em;margin-top:5px;color:#28292D}.request-bottom .btn{min-height:39px;padding:10px 12px;font-size:10px}
   .student-strip{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;border:1px solid var(--line);background:#fff;border-radius:17px;padding:16px 19px;margin-bottom:18px;box-shadow:0 6px 20px rgba(30,35,40,.035)}.student-label{font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:800}.student-code{font-size:17px;font-weight:800;margin-top:5px;color:#28292D;letter-spacing:.02em}.subtle-btn{background:transparent;border:0;color:var(--red);font-size:11px;font-weight:800;padding:8px;border-radius:8px}.subtle-btn:hover{background:#FFF0F3}
   .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 17px}.span-2{grid-column:1/-1}.section-label{display:flex;align-items:center;gap:10px;font-size:10px;text-transform:uppercase;letter-spacing:.13em;font-weight:800;color:var(--red);margin:24px 0 15px;padding-bottom:10px;border-bottom:1px solid var(--line)}.section-label:before{content:"";width:7px;height:7px;border-radius:2px;background:var(--red);transform:rotate(45deg)}.upload{display:block;border:1px dashed #C6C8CD;border-radius:14px;padding:15px;background:#FAFAFB;transition:border-color .18s,background .18s}.upload:hover{border-color:#E99AA9;background:#FFF9FA}.upload input{width:100%;font-size:11px;color:#4B4D53}.file-name{font-size:10px;color:var(--muted);margin-top:8px;line-height:1.6;overflow-wrap:anywhere}.checkline{display:flex;gap:10px;align-items:flex-start;font-size:11px;line-height:1.7;color:#4A4C52}.checkline input{margin-top:4px;accent-color:var(--red);width:15px;height:15px;flex-shrink:0}.footer-note{font-size:10px;color:var(--muted);line-height:1.8;margin-top:18px}.divider{border:0;border-top:1px solid var(--line);margin:20px 0}.empty{text-align:center;padding:34px 18px;border:1px dashed #D1D5DB;border-radius:17px;color:var(--muted);background:#FCFCFD}.empty strong{display:block;color:var(--ink);font-size:13px;margin:12px 0 6px}.empty p{font-size:11px;line-height:1.7;margin:0}
+
+  .request-tools{display:flex;flex-direction:column;gap:14px;margin:0 0 20px}
+  .request-search{position:relative;width:100%}
+  .request-search>i{position:absolute;left:15px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:#858891;pointer-events:none}
+  .request-search input{width:100%;min-height:48px;border:1px solid #D9DBE0;border-radius:14px;padding:13px 15px 13px 44px;background:#fff;color:var(--ink);outline:none;font-size:12px;transition:border-color .18s,box-shadow .18s}
+  .request-search input:focus{border-color:var(--red);box-shadow:0 0 0 4px rgba(227,23,62,.08)}
+  .request-filters{display:flex;flex-wrap:wrap;gap:8px}
+  .request-filter{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:39px;border:1px solid #E0E1E5;border-radius:999px;background:#fff;color:#565860;padding:8px 12px;font-size:10px;font-weight:800;transition:all .16s}
+  .request-filter:hover{border-color:#E8A1AE;background:#FFF8F9}
+  .request-filter.active{background:#A90B26;color:#fff;border-color:#A90B26;box-shadow:0 4px 12px rgba(174,8,0,.12)}
+  .filter-count{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 6px;border-radius:999px;background:#F0F1F4;color:#555861;font-size:9px;font-weight:800}
+  .request-filter.active .filter-count{background:rgba(255,255,255,.18);color:#fff}
+  .request-filter-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:10px}
+  .request-filter-meta strong{color:#33353A}
+  @media(max-width:680px){.grid{grid-template-columns:minmax(0,1fr)}.request-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.request-filter{justify-content:space-between}.request-filter:first-child{grid-column:1/-1}}
   /* Pantalla de acceso con el mismo lenguaje visual ESAN: rojo, fotografía, tarjetas y bordes suaves. */
   .login-overlay{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(310px,430px);align-items:center;gap:clamp(24px,4vw,50px);overflow:hidden;padding:clamp(22px,4vw,42px);margin:0 0 22px;border-radius:26px;min-height:490px;background-color:#650000;background-size:cover;background-position:center;box-shadow:0 20px 50px rgba(77,0,0,.18)}
   .login-welcome{position:relative;z-index:1;max-width:570px;color:#fff;padding:8px 0}.welcome-tag{display:inline-flex;align-items:center;gap:8px;padding:8px 11px;border:1px solid rgba(255,255,255,.27);border-radius:999px;background:rgba(255,255,255,.1);font-size:9px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#fff}.welcome-tag i{width:15px;height:15px}.welcome-title{font-size:clamp(27px,3.5vw,43px);line-height:1.1;letter-spacing:-.045em;font-weight:800;margin:19px 0 13px;max-width:520px;color:#fff}.welcome-copy{font-size:13px;line-height:1.85;color:rgba(255,255,255,.86);max-width:500px;margin:0}.welcome-features{display:grid;gap:15px;margin-top:27px;max-width:480px}.welcome-feature{display:flex;align-items:flex-start;gap:12px}.welcome-feature-icon{width:37px;height:37px;flex-shrink:0;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.17);color:#fff}.welcome-feature-icon i{width:18px;height:18px}.welcome-feature strong{display:block;font-size:11px;font-weight:800;color:#fff;margin:2px 0 4px}.welcome-feature span{display:block;font-size:10px;line-height:1.65;color:rgba(255,255,255,.77)}.welcome-note{display:flex;align-items:center;gap:8px;margin-top:27px;font-size:10px;color:rgba(255,255,255,.8)}.welcome-note i{width:15px;height:15px;flex-shrink:0}
@@ -140,14 +155,14 @@
     </div>
 
     <div class="flex-1 min-h-0 overflow-y-auto py-3" id="menu-container">
-      <button type="button" class="menu-btn active-tab" onclick="irASeccion('listView')">
+      <button id="menuList" type="button" class="menu-btn active-tab" onclick="irASeccion('listView')">
         <i data-lucide="clipboard-list" class="w-5 h-5 shrink-0"></i>
         <span>Mis solicitudes y pagos</span>
       </button>
-      <a href="mailto:ssacad@ue.edu.pe" class="menu-btn">
+      <button id="menuSupport" type="button" class="menu-btn" onclick="irASeccion('supportView')">
         <i data-lucide="life-buoy" class="w-5 h-5 shrink-0"></i>
         <span>Soporte y ayuda</span>
-      </a>
+      </button>
     </div>
 
     <div class="p-4 text-center text-xs text-white/80 border-t border-white/20 leading-relaxed">
@@ -174,18 +189,7 @@
     </header>
 
     <div id="viewer" class="flex-1 overflow-y-auto p-4 sm:p-6 md:p-10 w-full">
-<section id="paymentHero" class="intro relative overflow-hidden rounded-3xl bg-gray-900 border border-gray-200 shadow-sm mb-8 min-h-[300px] flex items-end" data-esan-background="true">
-      <div class="eyebrow">Portal de atención al estudiante</div>
-      <h1 class="page-title">Tus solicitudes y pagos, en un solo lugar</h1>
-      <p>Consulta tus trámites registrados, revisa el estado de cada solicitud y envía el comprobante de pago de forma sencilla y segura.</p>
-      <div class="intro-points">
-        <span class="intro-point"><i data-lucide="clipboard-list"></i> Consulta tus trámites</span>
-        <span class="intro-point"><i data-lucide="wallet"></i> Revisa tus pagos</span>
-        <span class="intro-point"><i data-lucide="shield-check"></i> Acceso verificado</span>
-      </div>
-    </section>
-
-    <section id="loginGate"
+<section id="loginGate"
   class="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto p-4 sm:p-6 bg-gray-900 bg-cover bg-center"
   style="background-image:linear-gradient(rgba(17,24,39,.62),rgba(17,24,39,.72))">
   <div class="w-full max-w-md my-auto rounded-3xl bg-white shadow-2xl overflow-hidden">
@@ -247,11 +251,70 @@
         <div><div class="student-label">Código de estudiante verificado</div><div id="studentCode" class="student-code">—</div></div>
         <button id="logoutBtn" class="subtle-btn" type="button">Cerrar sesión</button>
       </div>
-      <section id="listView" class="panel">
+      <div id="listView">
+        <!-- Inicio del portal: misma composición e imagen que el inicio del Simulador de Trámites Académicos. -->
+        <section id="paymentHero" class="relative overflow-hidden rounded-3xl bg-gray-900 border border-gray-200 shadow-sm mb-8 min-h-[340px] flex items-end">
+          <div data-esan-background="true" class="absolute inset-0 bg-cover bg-center" style="background-image:linear-gradient(90deg,rgba(17,24,39,.82),rgba(17,24,39,.20))" aria-hidden="true"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-950/65 via-transparent to-transparent pointer-events-none"></div>
+          <div class="relative p-7 sm:p-10 md:p-12 text-white max-w-4xl">
+            <span class="inline-flex items-center gap-2 rounded-full bg-white/15 border border-white/20 px-4 py-2 text-xs uppercase tracking-wider font-bold mb-5">
+              <i data-lucide="sparkles" class="w-4 h-4"></i> Universidad ESAN
+            </span>
+            <h1 class="text-3xl md:text-5xl font-extrabold max-w-3xl leading-tight">Tus solicitudes y pagos, en un solo lugar</h1>
+            <p class="text-white/90 mt-5 max-w-3xl leading-relaxed">Consulta tus trámites registrados, revisa el estado de cada solicitud y envía el comprobante de pago de forma sencilla y segura.</p>
+            <div class="mt-7 flex flex-wrap gap-3 text-sm text-white">
+              <span class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2"><i data-lucide="clipboard-list" class="w-4 h-4"></i> Consulta tus trámites</span>
+              <span class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2"><i data-lucide="wallet" class="w-4 h-4"></i> Revisa tus pagos</span>
+              <span class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2"><i data-lucide="shield-check" class="w-4 h-4"></i> Acceso verificado</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
         <h2 class="panel-title">Tus solicitudes</h2>
-        <p class="panel-desc">Aquí aparecerán los trámites vinculados a tu código. En los trámites que requieren revisión, podrás registrar el pago cuando el área responsable haya validado la solicitud y definido el monto.</p>
+        <p class="panel-desc">Busca por trámite, identificador o detalle y filtra tus solicitudes según el estado del pago o de la revisión.</p>
+        <div class="request-tools" aria-label="Buscar y filtrar solicitudes">
+          <label class="request-search" for="requestsSearch">
+            <i data-lucide="search" aria-hidden="true"></i>
+            <input id="requestsSearch" type="search" autocomplete="off" placeholder="Buscar por trámite, ID, detalle o estado…" oninput="aplicarFiltrosSolicitudes()" aria-label="Buscar solicitudes">
+          </label>
+          <div class="request-filters" role="group" aria-label="Filtrar solicitudes por estado">
+            <button type="button" class="request-filter active" data-filter="TODAS" aria-pressed="true" onclick="seleccionarFiltroSolicitudes('TODAS')">Todas <span class="filter-count" id="count-TODAS">0</span></button>
+            <button type="button" class="request-filter" data-filter="VALIDADAS" aria-pressed="false" onclick="seleccionarFiltroSolicitudes('VALIDADAS')">Validados <span class="filter-count" id="count-VALIDADAS">0</span></button>
+            <button type="button" class="request-filter" data-filter="OBSERVADAS" aria-pressed="false" onclick="seleccionarFiltroSolicitudes('OBSERVADAS')">Observados <span class="filter-count" id="count-OBSERVADAS">0</span></button>
+            <button type="button" class="request-filter" data-filter="PENDIENTES_PAGO" aria-pressed="false" onclick="seleccionarFiltroSolicitudes('PENDIENTES_PAGO')">Pendientes de pago <span class="filter-count" id="count-PENDIENTES_PAGO">0</span></button>
+            <button type="button" class="request-filter" data-filter="PENDIENTES_VALIDACION" aria-pressed="false" onclick="seleccionarFiltroSolicitudes('PENDIENTES_VALIDACION')">Pendientes de validación <span class="filter-count" id="count-PENDIENTES_VALIDACION">0</span></button>
+          </div>
+          <div class="request-filter-meta"><span id="requestsResultCount">0 solicitudes</span><button type="button" class="subtle-btn" onclick="limpiarFiltrosSolicitudes()">Limpiar búsqueda y filtros</button></div>
+        </div>
         <div id="requestsStatus" class="status info hidden" role="status" aria-live="polite"></div>
-        <div id="requestsList" class="grid"></div>
+        <div id="requestsList" class="grid" aria-live="polite"></div>
+        </section>
+      </div>
+
+      <section id="supportView" class="hidden">
+        <div class="max-w-3xl mx-auto">
+          <button type="button" onclick="irASeccion('listView')" class="inline-flex items-center gap-2 text-sm font-bold text-[var(--esan-red)] hover:underline mb-5">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+            Volver a mis solicitudes y pagos
+          </button>
+          <section class="bg-white rounded-3xl border border-gray-200 shadow-sm p-7 sm:p-10">
+            <div class="w-14 h-14 rounded-2xl bg-red-50 flex items-center justify-center">
+              <i data-lucide="headset" class="w-7 h-7 text-[var(--esan-red)]"></i>
+            </div>
+            <h2 class="text-3xl font-extrabold text-gray-900 mt-5">¿Necesitas soporte?</h2>
+            <p class="text-gray-600 mt-3 leading-relaxed">Si tienes consultas o inconvenientes con el registro de tus solicitudes o pagos, puedes comunicarte con Servicios Académicos.</p>
+            <div class="mt-6 rounded-2xl border border-gray-200 p-5">
+              <p class="text-sm font-bold text-gray-900">Correo de contacto</p>
+              <a href="mailto:ssacad@ue.edu.pe" class="inline-flex items-center gap-2 mt-2 text-[var(--esan-red)] font-semibold underline">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+                ssacad@ue.edu.pe
+              </a>
+              <p class="text-sm font-bold text-gray-900 mt-6">Horario de atención</p>
+              <p class="text-sm text-gray-600 mt-2">Lunes a viernes, de 8:00 a. m. a 5:00 p. m.</p>
+            </div>
+          </section>
+        </div>
       </section>
 
       <section id="paymentView" class="panel hidden">
@@ -268,7 +331,9 @@
             <div class="field-wrap"><label class="label" for="payDate">Fecha de solicitud</label><input id="payDate" class="field" readonly></div>
             <div class="field-wrap span-2"><label class="label" for="payProcedure">Trámite solicitado</label><input id="payProcedure" class="field" readonly></div>
             <div class="field-wrap span-2"><label class="label" for="payDetail">Detalle del trámite</label><input id="payDetail" class="field" readonly></div>
-            <div class="field-wrap span-2"><label class="label" for="payAmount">Monto autorizado a pagar</label><input id="payAmount" class="field" readonly></div>
+            <div class="field-wrap"><label class="label" for="payExpectedAmount">Monto esperado según la solicitud</label><input id="payExpectedAmount" class="field" readonly></div>
+            <div class="field-wrap"><label class="label" for="payAmount">Monto que declaras haber pagado (S/)</label><input id="payAmount" class="field" type="number" inputmode="decimal" min="0.01" step="0.01" required placeholder="Ej. 35.00"></div>
+            <div class="field-wrap span-2"><p class="footer-note">Ingresa el importe que figura en tu comprobante. Solo se aceptan montos numéricos mayores que cero, con hasta dos decimales. Caja comparará el monto declarado con el monto esperado.</p></div>
           </div>
           <div class="section-label">Datos del pago</div>
           <div class="form-grid">
@@ -287,7 +352,7 @@
               </div>
             </div>
           </div>
-          <div class="status info">La fecha y hora de registro del pago se asignarán automáticamente al enviar el formulario. El monto se toma del registro de tu solicitud y no se puede modificar aquí.</div>
+          <div class="status info">La fecha y hora de registro se asignarán automáticamente. Verifica que el monto declarado coincida con el importe que figura en tu comprobante; Caja revisará cualquier diferencia con el monto esperado.</div>
           <label class="checkline" style="margin-top:15px"><input id="confirmData" type="checkbox" required><span>Confirmo que los datos ingresados y el comprobante adjunto corresponden al pago de esta solicitud.</span></label>
           <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px">
             <button id="submitPaymentBtn" type="submit" class="btn btn-primary"><i data-lucide="file-check"></i> Enviar comprobante</button>
@@ -312,11 +377,11 @@
       loginGate.style.backgroundSize = "cover";
       loginGate.style.backgroundPosition = "center";
     }
-    const paymentHero = document.getElementById("paymentHero");
-    if (paymentHero) {
-      paymentHero.style.backgroundImage = `linear-gradient(90deg,rgba(17,24,39,.82),rgba(17,24,39,.20)),linear-gradient(0deg,rgba(17,24,39,.48),transparent 65%),url("${IMAGEN_ESAN_DATA_URI}")`;
-      paymentHero.style.backgroundSize = "cover";
-      paymentHero.style.backgroundPosition = "center";
+    const paymentHeroBackground = document.querySelector("#paymentHero [data-esan-background='true']");
+    if (paymentHeroBackground) {
+      paymentHeroBackground.style.backgroundImage = `linear-gradient(90deg,rgba(17,24,39,.82),rgba(17,24,39,.20)),url("${IMAGEN_ESAN_DATA_URI}")`;
+      paymentHeroBackground.style.backgroundSize = "cover";
+      paymentHeroBackground.style.backgroundPosition = "center";
     }
     const MODO_VISTA_PREVIA = new URLSearchParams(window.location.search).get("vistaPrevia") === "1";
     const solicitudesBackendPendientes = new Map();
@@ -367,11 +432,34 @@
       backdrop.classList.toggle("hidden",!abrir);
       boton?.setAttribute("aria-expanded",String(abrir));
     }
+    function actualizarPestanaActiva(id){
+      document.querySelectorAll("#menu-container .menu-btn").forEach(btn=>btn.classList.remove("active-tab"));
+      if(id==="supportView") document.getElementById("menuSupport")?.classList.add("active-tab");
+      else document.getElementById("menuList")?.classList.add("active-tab");
+    }
+
     function irASeccion(id){
-      const destino=document.getElementById(id);
-      if(destino && !destino.classList.contains("hidden")) destino.scrollIntoView({behavior:"smooth",block:"start"});
-      else if(id==="listView") document.getElementById("portal")?.scrollIntoView({behavior:"smooth",block:"start"});
+      const lista=document.getElementById("listView");
+      const pagos=document.getElementById("paymentView");
+      const soporte=document.getElementById("supportView");
+      if(!lista || !pagos || !soporte) return;
+
+      if(id==="supportView"){
+        lista.classList.add("hidden");
+        pagos.classList.add("hidden");
+        soporte.classList.remove("hidden");
+        document.getElementById("topTitle").textContent="Soporte y ayuda";
+        actualizarPestanaActiva("supportView");
+      }else{
+        soporte.classList.add("hidden");
+        pagos.classList.add("hidden");
+        lista.classList.remove("hidden");
+        document.getElementById("topTitle").textContent="Mis solicitudes y pagos";
+        actualizarPestanaActiva("listView");
+      }
+      document.getElementById("viewer")?.scrollTo({top:0,behavior:"smooth"});
       toggleMenu(false);
+      iconos();
     }
     function mostrarEstado(id,mensaje,tipo="info"){ const el=document.getElementById(id); if(!el)return; el.className=`status ${tipo}`; el.textContent=mensaje; el.classList.remove("hidden"); }
     function ocultarEstado(id){ const el=document.getElementById(id); if(el)el.classList.add("hidden"); }
@@ -529,6 +617,11 @@
         document.getElementById("studentCode").textContent=codigo;
         document.getElementById("loginGate").classList.add("hidden");
         document.getElementById("portal").classList.remove("hidden");
+        document.getElementById("listView").classList.remove("hidden");
+        document.getElementById("paymentView").classList.add("hidden");
+        document.getElementById("supportView").classList.add("hidden");
+        document.getElementById("topTitle").textContent="Mis solicitudes y pagos";
+        actualizarPestanaActiva("listView");
         await cargarSolicitudes();
       }catch(err){
         console.error(err);
@@ -540,41 +633,58 @@
     }
 
     async function cargarSolicitudes(){
-      const list=document.getElementById("requestsList"); list.innerHTML="";
-      const status=document.getElementById("requestsStatus"); status.className="status info"; status.textContent="Consultando tus solicitudes..."; status.classList.remove("hidden");
+      const list=document.getElementById("requestsList");
+      const status=document.getElementById("requestsStatus");
+      list.innerHTML="";
+      solicitudesTodas=[];
+      solicitudesVisibles=[];
+      filtroSolicitudesActual="TODAS";
+      const buscador=document.getElementById("requestsSearch");
+      if(buscador)buscador.value="";
+      actualizarBotonesFiltroSolicitudes();
+      status.className="status info";
+      status.textContent="Consultando tus solicitudes...";
+      status.classList.remove("hidden");
+      actualizarContadoresFiltrosSolicitudes();
+
       if(MODO_VISTA_PREVIA){
         const ejemplos=[
-          {idSolicitud:"DEMO-001",fechaRegistro:"2026-10-20T12:00:00",codigo:codigoEstudianteActivo,nombre:"ESTUDIANTE DE EJEMPLO",tipo:"CONSTANCIA_CONDUCTA",detalle:"Constancia de conducta",monto:35,estadoRevision:"APROBADA",estadoPago:"PENDIENTE",puedePagar:true},
-          {idSolicitud:"DEMO-002",fechaRegistro:"2026-10-21T12:00:00",codigo:codigoEstudianteActivo,nombre:"ESTUDIANTE DE EJEMPLO",tipo:"EXAMEN_REZAGADOS",detalle:"Curso: Matemática I",monto:85,estadoRevision:"APROBADA",estadoPago:"PENDIENTE",puedePagar:true},
-          {idSolicitud:"DEMO-003",fechaRegistro:"2026-10-22T12:00:00",codigo:codigoEstudianteActivo,nombre:"ESTUDIANTE DE EJEMPLO",tipo:"EMISION_SILABOS",detalle:"3 sílabos solicitados",monto:60,estadoRevision:"En revisión",estadoPago:"PENDIENTE",puedePagar:false}
+          {idSolicitud:"DEMO-001",fechaRegistro:"2026-10-20T12:00:00",codigo:codigoEstudianteActivo,nombre:"ESTUDIANTE DE EJEMPLO",tipo:"CONSTANCIA_CONDUCTA",detalle:"Constancia de conducta",monto:35,estadoRevision:"VALIDADO",estadoPago:"VALIDADO",puedePagar:false},
+          {idSolicitud:"DEMO-002",fechaRegistro:"2026-10-21T12:00:00",codigo:codigoEstudianteActivo,nombre:"ESTUDIANTE DE EJEMPLO",tipo:"EXAMEN_REZAGADOS",detalle:"Curso: Matemática I",monto:85,estadoRevision:"VALIDADO",estadoPago:"OBSERVADO",puedePagar:true},
+          {idSolicitud:"DEMO-003",fechaRegistro:"2026-10-22T12:00:00",codigo:codigoEstudianteActivo,nombre:"ESTUDIANTE DE EJEMPLO",tipo:"EMISION_SILABOS",detalle:"3 sílabos solicitados",monto:60,estadoRevision:"PENDIENTE",estadoPago:"PENDIENTE",puedePagar:false},
+          {idSolicitud:"DEMO-004",fechaRegistro:"2026-10-23T12:00:00",codigo:codigoEstudianteActivo,nombre:"ESTUDIANTE DE EJEMPLO",tipo:"EXAMEN_REZAGADOS",detalle:"Curso: Estadística",monto:85,estadoRevision:"VALIDADO",estadoPago:"PENDIENTE",puedePagar:true},
+          {idSolicitud:"DEMO-005",fechaRegistro:"2026-10-24T12:00:00",codigo:codigoEstudianteActivo,nombre:"ESTUDIANTE DE EJEMPLO",tipo:"EMISION_SILABOS",detalle:"Comprobante enviado; pendiente de revisión",monto:60,estadoRevision:"VALIDADO",estadoPago:"POR_REVISAR",puedePagar:false}
         ];
-        solicitudesVisibles=[];
+        solicitudesTodas=ejemplos;
         status.className="status warn";
         status.textContent="VISTA PREVIA: las solicitudes son ficticias. No se enviarán comprobantes ni se registrarán pagos reales.";
         status.classList.remove("hidden");
-        list.innerHTML=ejemplos.map((solicitud,index)=>renderSolicitud(solicitud,index)).join("");
-        list.querySelectorAll("[data-pagar-index]").forEach(btn=>btn.addEventListener("click",()=>abrirPago(Number(btn.dataset.pagarIndex))));
-        iconos();
+        aplicarFiltrosSolicitudes();
         return;
       }
       try{
-        // Acción que se habilitará en Apps Script: debe consultar las seis pestañas y devolver solo solicitudes del código autenticado.
         const res=await llamarBackend("listarSolicitudesPago",tokenSesionActivo);
         if(!res||!res.ok){
+          solicitudesTodas=[];
+          actualizarContadoresFiltrosSolicitudes();
           mostrarEstado("requestsStatus",res?.mensaje||"No se pudieron consultar tus solicitudes. Inténtalo nuevamente o comunícate con Servicios Académicos.","warn");
           return;
         }
         const solicitudes=Array.isArray(res.solicitudes)?res.solicitudes:(Array.isArray(res.data)?res.data:(Array.isArray(res.items)?res.items:[]));
-        solicitudesVisibles=[];
+        solicitudesTodas=solicitudes.map(normalizarSolicitud);
         status.classList.add("hidden");
-        if(!solicitudes.length){list.innerHTML='<div class="empty" style="grid-column:1/-1"><i data-lucide="clipboard-list" style="width:28px;height:28px;margin:auto"></i><strong>No encontramos solicitudes para mostrar</strong><p>Si acabas de enviar una solicitud, vuelve a intentarlo más tarde o comunícate con Servicios Académicos.</p></div>';iconos();return;}
-        list.innerHTML=solicitudes.map((raw,index)=>renderSolicitud(normalizarSolicitud(raw),index)).join("");
-        list.querySelectorAll("[data-pagar-index]").forEach(btn=>btn.addEventListener("click",()=>abrirPago(Number(btn.dataset.pagarIndex))));
-        iconos();
-      }catch(error){mostrarEstado("requestsStatus",error.message||"No se pudieron consultar tus solicitudes. Inténtalo nuevamente.","error");}
+        aplicarFiltrosSolicitudes();
+      }catch(error){
+        solicitudesTodas=[];
+        actualizarContadoresFiltrosSolicitudes();
+        mostrarEstado("requestsStatus",error.message||"No se pudieron consultar tus solicitudes. Inténtalo nuevamente.","error");
+      }
     }
 
+    let solicitudesTodas=[];
     let solicitudesVisibles=[];
+    let filtroSolicitudesActual="TODAS";
+
     function normalizarSolicitud(s){
       return {
         idSolicitud:s.ID_SOLICITUD??s.idSolicitud??s.codigoSolicitud??s.id??"",
@@ -590,6 +700,82 @@
         puedePagar:s.PUEDE_PAGAR??s.puedePagar
       };
     }
+
+    function normalizarEstadoFiltro(valor){
+      return String(valor??"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toUpperCase().trim().replace(/[\s-]+/g,"_");
+    }
+    function clasificarSolicitud(s){
+      const pago=normalizarEstadoFiltro(s.estadoPago);
+      const revision=normalizarEstadoFiltro(s.estadoRevision);
+      const general=normalizarEstadoFiltro(s.estadoSolicitud);
+      const estadosPagados=["VALIDADO","VALIDADA","PAGADO","PAGADA","COMPLETADO","COMPLETADA","CONFIRMADO","CONFIRMADA","APROBADO","APROBADA"];
+      const estadosObservados=["OBSERVADO","OBSERVADA","RECHAZADO","RECHAZADA","IMPROCEDENTE"];
+      const estadosRevisionPendiente=["POR_REVISAR","EN_REVISION","PENDIENTE_REVISION","EN_PROCESO"];
+      if(estadosPagados.includes(pago))return "VALIDADAS";
+      if(estadosObservados.includes(pago)||estadosObservados.includes(revision)||estadosObservados.includes(general))return "OBSERVADAS";
+      if(estadosRevisionPendiente.includes(pago))return "PENDIENTES_VALIDACION";
+      if(s.puedePagar===true)return "PENDIENTES_PAGO";
+      const revisionValidada=["VALIDADO","VALIDADA","PROCEDENTE","APROBADO","APROBADA","COMPLETADO","COMPLETADA"].includes(revision)||["PROCEDENTE","VALIDADO","VALIDADA","APROBADO","APROBADA"].includes(general);
+      if(!revisionValidada)return "PENDIENTES_VALIDACION";
+      if(["PENDIENTE",""].includes(pago)&&numeroMonto(s.monto)>0)return "PENDIENTES_PAGO";
+      return "PENDIENTES_VALIDACION";
+    }
+    function normalizarTextoBusqueda(valor){
+      return String(valor??"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("es-PE");
+    }
+    function actualizarBotonesFiltroSolicitudes(){
+      document.querySelectorAll(".request-filter[data-filter]").forEach(btn=>{
+        const activo=btn.dataset.filter===filtroSolicitudesActual;
+        btn.classList.toggle("active",activo);
+        btn.setAttribute("aria-pressed",String(activo));
+      });
+    }
+    function actualizarContadoresFiltrosSolicitudes(){
+      const conteos={TODAS:solicitudesTodas.length,VALIDADAS:0,OBSERVADAS:0,PENDIENTES_PAGO:0,PENDIENTES_VALIDACION:0};
+      solicitudesTodas.forEach(s=>{const categoria=clasificarSolicitud(s);if(Object.prototype.hasOwnProperty.call(conteos,categoria))conteos[categoria]++;});
+      Object.entries(conteos).forEach(([categoria,cantidad])=>{
+        const el=document.getElementById("count-"+categoria);if(el)el.textContent=String(cantidad);
+      });
+    }
+    function seleccionarFiltroSolicitudes(categoria){
+      filtroSolicitudesActual=categoria;
+      actualizarBotonesFiltroSolicitudes();
+      aplicarFiltrosSolicitudes();
+    }
+    function limpiarFiltrosSolicitudes(){
+      const buscador=document.getElementById("requestsSearch");if(buscador)buscador.value="";
+      filtroSolicitudesActual="TODAS";
+      actualizarBotonesFiltroSolicitudes();
+      aplicarFiltrosSolicitudes();
+    }
+    function aplicarFiltrosSolicitudes(){
+      const list=document.getElementById("requestsList");if(!list)return;
+      const query=normalizarTextoBusqueda(document.getElementById("requestsSearch")?.value||"").trim();
+      solicitudesVisibles=solicitudesTodas.slice();
+      actualizarContadoresFiltrosSolicitudes();
+      const coincidencias=solicitudesTodas.map((solicitud,index)=>({solicitud,index})).filter(({solicitud})=>{
+        const categoria=clasificarSolicitud(solicitud);
+        if(filtroSolicitudesActual!=="TODAS"&&categoria!==filtroSolicitudesActual)return false;
+        if(!query)return true;
+        const texto=[solicitud.idSolicitud,solicitud.codigo,solicitud.nombre,solicitud.tipo,etiquetaTramite(solicitud.tipo),formatearDetalleSolicitud(solicitud.detalle),solicitud.estadoPago,solicitud.estadoRevision,solicitud.estadoSolicitud,categoria,formatearFecha(solicitud.fechaRegistro)].join(" ");
+        return normalizarTextoBusqueda(texto).includes(query);
+      });
+      const contador=document.getElementById("requestsResultCount");
+      if(contador){
+        const n=coincidencias.length,total=solicitudesTodas.length;
+        contador.innerHTML=`Mostrando <strong>${n}</strong> de <strong>${total}</strong> solicitud${total===1?"":"es"}`;
+      }
+      if(!coincidencias.length){
+        const haySolicitudes=solicitudesTodas.length>0;
+        list.innerHTML=`<div class="empty" style="grid-column:1/-1"><i data-lucide="${haySolicitudes?"search-x":"clipboard-list"}" style="width:28px;height:28px;margin:auto"></i><strong>${haySolicitudes?"No encontramos coincidencias":"No encontramos solicitudes para mostrar"}</strong><p>${haySolicitudes?"Prueba con otra búsqueda o selecciona un estado diferente.":"Si acabas de enviar una solicitud, vuelve a intentarlo más tarde o comunícate con Servicios Académicos."}</p></div>`;
+        iconos();
+        return;
+      }
+      list.innerHTML=coincidencias.map(({solicitud,index})=>renderSolicitud(solicitud,index)).join("");
+      list.querySelectorAll("[data-pagar-index]").forEach(btn=>btn.addEventListener("click",()=>abrirPago(Number(btn.dataset.pagarIndex))));
+      iconos();
+    }
+
     function renderSolicitud(s,index){
       solicitudesVisibles[index]=s;
       const estadoPago=String(s.estadoPago||"").toUpperCase();
@@ -604,7 +790,8 @@
       const puedePagar=typeof s.puedePagar==="boolean"?s.puedePagar:(validada&&!pagado&&!pagoEnRevision&&monto>0);
       let pillClass=pagado?"green":(puedePagar||pagoObservado)?"amber":"";
       let pillText=pagado?"Pago validado":pagoEnRevision?"Comprobante en revisión":pagoObservado&&puedePagar?"Pago observado: puedes corregirlo":puedePagar?"Pendiente de pago":solicitudObservada?"Solicitud observada":(s.estadoRevision||s.estadoSolicitud||"En revisión");
-      const detail=s.detalle?`Detalle: ${escapeHtml(String(s.detalle))}`:"Consulta el detalle en tu solicitud original.";
+      const detalleFormateado=formatearDetalleSolicitud(s.detalle);
+      const detail=detalleFormateado?`Detalle: ${escapeHtml(detalleFormateado)}`:"Consulta el detalle en tu solicitud original.";
       return `<article class="request-card"><div class="request-top"><div><div class="request-name">${escapeHtml(etiquetaTramite(s.tipo))}</div><div class="request-id">ID_SOLICITUD: ${escapeHtml(String(s.idSolicitud||"Pendiente de asignación"))}</div></div><span class="pill ${pillClass}">${escapeHtml(pillText)}</span></div><div class="request-detail">Fecha de solicitud: ${escapeHtml(formatearFecha(s.fechaRegistro)||"No disponible")}<br>${detail}</div><div class="request-bottom"><div><div class="amount-label">Monto a pagar</div><div class="amount">${monto>0?formatearMoneda(monto):"Por confirmar"}</div></div><button type="button" class="btn btn-primary" data-pagar-index="${index}" ${puedePagar?"":"disabled"}><i data-lucide="wallet"></i> ${puedePagar?(pagoObservado?"Volver a enviar comprobante":"Completar pago"):pagado?"Pago validado":pagoEnRevision?"Comprobante en revisión":solicitudObservada?"Revisa el correo recibido":"En espera de validación"}</button></div></article>`;
     }
     function etiquetaTramite(tipo){
@@ -621,24 +808,37 @@
     }
     function formatearMoneda(v){return new Intl.NumberFormat("es-PE",{style:"currency",currency:"PEN",minimumFractionDigits:2}).format(numeroMonto(v));}
     function formatearFecha(v){if(!v)return "";const d=new Date(v);if(Number.isNaN(d.getTime()))return String(v);return new Intl.DateTimeFormat("es-PE",{day:"2-digit",month:"2-digit",year:"numeric"}).format(d);}
+    function formatearDetalleSolicitud(valor){
+      let texto=String(valor??"").trim();
+      if(!texto)return "";
+      texto=texto.replace(/constanciaRendimientoFacultad/gi,"Constancia de rendimiento académico por facultad");
+      const meses={Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Oct:10,Nov:11,Dec:12};
+      // Algunos ciclos llegan desde Sheets como fechas completas al convertir "2026-1" en una fecha.
+      texto=texto.replace(/\b(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d{1,2}\s+(\d{4})\s+\d{2}:\d{2}:\d{2}\s+GMT[+-]\d{4}(?:\s+\([^)]*\))?/g,(fecha,mes,anio)=>`${anio}-${meses[mes]}`);
+      return texto;
+    }
     function escapeHtml(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 
     function abrirPago(index){
       const s=solicitudesVisibles[index]; if(!s)return; solicitudSeleccionada=s;
-      document.getElementById("listView").classList.add("hidden"); document.getElementById("paymentView").classList.remove("hidden");
+      document.getElementById("listView").classList.add("hidden"); document.getElementById("supportView").classList.add("hidden"); document.getElementById("paymentView").classList.remove("hidden");
+      document.getElementById("topTitle").textContent="Registrar comprobante de pago";
+      actualizarPestanaActiva("listView");
       document.getElementById("payCode").value=codigoEstudianteActivo;
       document.getElementById("payName").value=s.nombre||"Se completará con los datos de la solicitud";
       document.getElementById("payId").value=s.idSolicitud;
       document.getElementById("payDate").value=formatearFecha(s.fechaRegistro)||"Se asignará desde el registro";
       document.getElementById("payProcedure").value=etiquetaTramite(s.tipo);
       document.getElementById("payDetail").value=s.detalle||"Ver detalle de la solicitud";
-      document.getElementById("payAmount").value=numeroMonto(s.monto)>0?formatearMoneda(s.monto):"Monto por confirmar";
+      document.getElementById("payExpectedAmount").value=numeroMonto(s.monto)>0?formatearMoneda(s.monto):"Monto por confirmar";
+      document.getElementById("payAmount").value=numeroMonto(s.monto)>0?numeroMonto(s.monto).toFixed(2):"";
       document.getElementById("paymentForm").reset();
       // reset() no debe borrar los datos precargados ni la selección de solicitud.
       document.getElementById("payCode").value=codigoEstudianteActivo; document.getElementById("payName").value=s.nombre||"Se completará con los datos de la solicitud";
       document.getElementById("payId").value=s.idSolicitud; document.getElementById("payDate").value=formatearFecha(s.fechaRegistro)||"Se asignará desde el registro";
-      document.getElementById("payProcedure").value=etiquetaTramite(s.tipo); document.getElementById("payDetail").value=s.detalle||"Ver detalle de la solicitud";
-      document.getElementById("payAmount").value=numeroMonto(s.monto)>0?formatearMoneda(s.monto):"Monto por confirmar";
+      document.getElementById("payProcedure").value=etiquetaTramite(s.tipo); document.getElementById("payDetail").value=formatearDetalleSolicitud(s.detalle)||"Ver detalle de la solicitud";
+      document.getElementById("payExpectedAmount").value=numeroMonto(s.monto)>0?formatearMoneda(s.monto):"Monto por confirmar";
+      document.getElementById("payAmount").value=numeroMonto(s.monto)>0?numeroMonto(s.monto).toFixed(2):"";
       actualizarFactura(); ocultarEstado("paymentStatus"); document.getElementById("receiptFileName").textContent="Adjunta el comprobante en formato PDF. Máximo 5 MB.";
       const botonEnviar=document.getElementById("submitPaymentBtn");
       if(MODO_VISTA_PREVIA){botonEnviar.disabled=true;botonEnviar.innerHTML='<i data-lucide="eye"></i> Envío deshabilitado en vista previa';mostrarEstado("paymentStatus","Estás viendo un ejemplo de diseño. No adjuntes información real: el comprobante no se enviará.","warn");}
@@ -646,7 +846,7 @@
       iconos();
       window.scrollTo({top:0,behavior:"smooth"});
     }
-    function volverLista(){document.getElementById("paymentView").classList.add("hidden");document.getElementById("listView").classList.remove("hidden");solicitudSeleccionada=null;ocultarEstado("paymentStatus");window.scrollTo({top:0,behavior:"smooth"});}
+    function volverLista(){document.getElementById("paymentView").classList.add("hidden");document.getElementById("supportView").classList.add("hidden");document.getElementById("listView").classList.remove("hidden");solicitudSeleccionada=null;ocultarEstado("paymentStatus");document.getElementById("topTitle").textContent="Mis solicitudes y pagos";actualizarPestanaActiva("listView");document.getElementById("viewer")?.scrollTo({top:0,behavior:"smooth"});}
     function actualizarFactura(){const factura=document.getElementById("receiptType").value==="FACTURA";document.getElementById("invoiceFields").classList.toggle("hidden",!factura);["razonSocial","ruc","direccionFiscal"].forEach(id=>document.getElementById(id).required=factura);}
     function mostrarNombreArchivo(inputId,outputId){const file=document.getElementById(inputId).files?.[0];document.getElementById(outputId).textContent=file?`${file.name} · ${(file.size/1024/1024).toFixed(2)} MB`:"No se seleccionó ningún archivo.";}
 
@@ -666,6 +866,9 @@
       const ruc=String(document.getElementById("ruc").value||"").trim();
       if(tipo==="FACTURA"&&!/^\d{11}$/.test(ruc)){mostrarEstado("paymentStatus","Para solicitar factura, ingresa un RUC válido de 11 dígitos.","error");return;}
       if(!document.getElementById("confirmData").checked){mostrarEstado("paymentStatus","Confirma que los datos y el comprobante corresponden a esta solicitud.","error");return;}
+      const montoDeclarado=Number(document.getElementById("payAmount").value);
+      if(!Number.isFinite(montoDeclarado)||montoDeclarado<=0){mostrarEstado("paymentStatus","Ingresa un monto pagado mayor que S/ 0.00.","error");return;}
+      if(Math.abs(montoDeclarado*100-Math.round(montoDeclarado*100))>0.00001){mostrarEstado("paymentStatus","El monto debe tener como máximo dos decimales.","error");return;}
       const btn=document.getElementById("submitPaymentBtn");btn.disabled=true;btn.textContent="Enviando comprobante...";
       try{
         const comprobante=await leerArchivoPDF("receiptFile",true);
@@ -673,7 +876,7 @@
           idSolicitud:solicitudSeleccionada.idSolicitud,
           codigoEstudiante:codigoEstudianteActivo,
           titularCuenta:String(document.getElementById("titularCuenta").value||"").trim(),
-          montoDeclarado:numeroMonto(solicitudSeleccionada.monto),
+          montoDeclarado:montoDeclarado,
           tipoComprobanteSolicitado:tipo,
           razonSocial:tipo==="FACTURA"?String(document.getElementById("razonSocial").value||"").trim():"",
           ruc:tipo==="FACTURA"?ruc:"",
@@ -689,7 +892,7 @@
       }catch(error){mostrarEstado("paymentStatus",error.message||"No se pudo enviar el comprobante. Inténtalo nuevamente.","error");}
       finally{btn.disabled=false;btn.innerHTML='<i data-lucide="file-check"></i> Enviar comprobante';iconos();}
     }
-    function cerrarSesion(){tokenSesionActivo="";codigoEstudianteActivo="";solicitudSeleccionada=null;solicitudesVisibles=[];document.getElementById("portal").classList.add("hidden");document.getElementById("loginGate").classList.remove("hidden");document.getElementById("loginForm").reset();document.getElementById("loginCodigoError")?.classList.add("hidden");document.getElementById("loginCodigo")?.classList.remove("field-error");document.getElementById("correoInstitucionalContenedor").classList.add("hidden");document.getElementById("correoInstitucionalMostrar").value="";reiniciarPasoVerificacion();document.getElementById("requestsList").innerHTML="";ocultarEstado("requestsStatus");ocultarEstado("paymentStatus");}
+    function cerrarSesion(){tokenSesionActivo="";codigoEstudianteActivo="";solicitudSeleccionada=null;solicitudesTodas=[];solicitudesVisibles=[];filtroSolicitudesActual="TODAS";document.getElementById("requestsSearch")&&(document.getElementById("requestsSearch").value="");actualizarBotonesFiltroSolicitudes();actualizarContadoresFiltrosSolicitudes();document.getElementById("portal").classList.add("hidden");document.getElementById("loginGate").classList.remove("hidden");document.getElementById("listView").classList.remove("hidden");document.getElementById("paymentView").classList.add("hidden");document.getElementById("supportView").classList.add("hidden");document.getElementById("topTitle").textContent="Mis solicitudes y pagos";actualizarPestanaActiva("listView");document.getElementById("loginForm").reset();document.getElementById("loginCodigoError")?.classList.add("hidden");document.getElementById("loginCodigo")?.classList.remove("field-error");document.getElementById("correoInstitucionalContenedor").classList.add("hidden");document.getElementById("correoInstitucionalMostrar").value="";reiniciarPasoVerificacion();document.getElementById("requestsList").innerHTML="";ocultarEstado("requestsStatus");ocultarEstado("paymentStatus");}
     iconos();
   </script></body>
 </html>
